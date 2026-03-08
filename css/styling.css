@@ -67,7 +67,7 @@ p {
 
     .principle-header {
     height: 50vh; 
-    background-color: coral;
+    background-color:#9E2A00;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -85,7 +85,7 @@ p {
 
 
   
-    .principle-header::before {
+   /* .principle-header::before {
       content: '';
       position: absolute;
       top: 0;
@@ -94,19 +94,20 @@ p {
       bottom: 0;
       overflow: hidden;
       /* Add your gradient or solid color overlay here */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)); 
-      /*background-color: white;*/
+     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)); 
+
       z-index: -1; /* Puts the overlay behind the header content */
       /*transform: skewY(-6deg); */
-      /*transform-origin: bottom left;*/
-  }
-
+      /*transform-origin: bottom left;
+  }*/
 
 #sticky-header{
 
-    position:fixed;
+    
+    /*position:fixed;
     display: flex;
     align-items: center;
+
        flex-direction: row;
     background-color: gray;
     border-radius: 10px;
@@ -119,14 +120,56 @@ p {
   right:10%;
   justify-content: center ;
   z-index: 1000;
+    clip-path: polygon(
+    0 0,   
+    100% 30%,  
+    100% 100%,  
+    0 100%  
+);*/
+
+background-image: url('../pics/steamboat.jpg');
+background-size: cover;
+background-position: center;
+position:  fixed; /* Essential for positioning the pseudo-element overlay */
+display: flex;
+justify-content: flex-end; /* Aligns content to the right */
+align-items: center; 
+
+color: white;
+padding: 20px;
+text-align: center;
+height: 90px;
+top: -1000px;
+width:100%;
+z-index: 1000;
+clip-path: polygon(
+  0 0,   
+  100% 0%,  
+  100% 100%,  
+  0 20%  );
+
   transition: top 0.3s; 
 
 
 }
+#sticky-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Add your gradient or solid color overlay here */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); 
+    z-index: -1; /* Puts the overlay behind the header content */
+  }
+  
+
 
     #sticky-header.sticky {
         top: 0;
         }
+        
         
 .sticky-header-principle{
 
@@ -134,7 +177,7 @@ p {
     flex-direction: row;
     padding:10px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 40px;
     align-items:center;
 
 }
@@ -378,7 +421,6 @@ margin-bottom: 30px;
     display: grid;
    grid-template-columns: auto;
    text-align: center;
- 
    row-gap: 10px;
    column-gap: 10px;
 
@@ -388,7 +430,7 @@ margin-bottom: 30px;
 .principles-index a {
 
    color: white;
-   background-color: coral;
+    background-color:#9E2A00;
    text-decoration: none;
    padding: 15px;
    display: block;
@@ -399,7 +441,7 @@ margin-bottom: 30px;
 
 .principles-index a:hover{
 
-    color: coral;
+    color: #9E2A00;
     background-color: rgb(255, 199, 178);
     border: none;
     text-decoration: none;
@@ -414,7 +456,7 @@ footer{
 
     height: 20vh;
     align-items: center; 
-    background-color: coral;
+    background-color:#9E2A00;
     padding: 20px;
     clip-path: polygon(
         0 0,   
@@ -695,7 +737,7 @@ top: 0; /* Pop into view */
 
    body{
   
-    background: rgb(87, 87, 87);
+    background-color: gray;
 
    }
   
@@ -705,18 +747,7 @@ top: 0; /* Pop into view */
 
   }
 
-   #sticky-header{
 
-   
-    background-color: white;
-
-   }
-
-   #sticky-header a{
-
-    color:coral;
-
-   }
 
 .pre-madeGIF{
 
@@ -729,23 +760,43 @@ top: 0; /* Pop into view */
 
    .principle-header{
 
-    background-color: coral;
+    background-color:   rgb(116 66 48);
 
 
    }
 
-
-   .principle-header::before {
-
-    background: linear-gradient(to bottom, rgba(149, 149, 149, 0.5), rgba(255, 255, 255, 0.2)); 
-    
-}
-
-.header-container-principle{
+   .header-container-principle{
 
    
-    color:rgb(145, 71, 45);
+    color: white;
 
+
+}
+
+    .principles-index a {
+
+   color: white;
+    background-color:rgb(116 66 48);
+   text-decoration: none;
+   padding: 15px;
+   display: block;
+   text-align: center;
+   border-radius: 10px;
+
+}
+
+
+
+footer{
+
+    background-color: rgb(116 66 48);
+ 
+
+
+}
+.skipMain a {
+
+    color:white;
 
 }
 
@@ -753,6 +804,11 @@ top: 0; /* Pop into view */
       
 
 }
+
+
+
+
+
 
 
 
